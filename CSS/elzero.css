@@ -1,0 +1,36 @@
+/* Start Global */
+:root {
+  --main-color: #2196F3;
+  --main-color-alt: #1787e0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+    font-family: "Cairo", sans-serif;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* End Global */
