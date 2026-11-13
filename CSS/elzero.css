@@ -1,13 +1,22 @@
-/* Start Global */
 :root {
-  --main-color: #2196F3;
+  --main-color: #2196f3;
   --main-color-alt: #1787e0;
+  --main-height: 72px;
+  --main-transition-duration: 0.3s;
+}
+/* Start Global */
+* {
+  box-sizing: border-box;
 }
 html {
   scroll-behavior: smooth;
 }
 body {
-    font-family: "Cairo", sans-serif;
+  font-family: "Cairo", sans-serif;
+  background-color: black;
+}
+a {
+  text-decoration: none;
 }
 ul {
   list-style: none;
@@ -34,3 +43,41 @@ ul {
 }
 
 /* End Global */
+/* Start Header */
+.header {
+  position: relative;
+  background-color: white;
+  box-shadow: 0 0 10px #ddd;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.header .logo {
+    color: var(--main-color);
+    font-size: 20px;
+    position: relative;
+    height: var(--main-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.header .main-nav { 
+  display: flex;
+}
+.header .main-nav > li > a { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--main-height);
+  position: relative;
+  color: black;
+  padding: 0 30px;
+  transition: var(--main-transition-duration);
+}
+
+/* End Header */
