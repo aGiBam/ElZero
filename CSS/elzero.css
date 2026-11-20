@@ -135,6 +135,45 @@ a {
 .header .main-nav > li > a:hover::before {
   left: 0;
 }
+.header .mega-menu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: calc(100% + 50px);
+  padding: 30px;
+  background-color: white;
+  border-bottom: 3px solid var(--main-color);
+  z-index: 100;
+  display: flex;
+  gap: 40px;
+  transition:
+    top var(--main-transition-duration),
+    opacity var(--main-transition-duration);
+}
+.header .mega-menu .image img {
+  max-width: 100%;
+}
+.header .mega-menu .links {
+}
+.header .mega-menu .links li {
+  display: flex;
+  align-items: center;
+}
+.header .mega-menu .links li::before {
+}
+.header .mega-menu .links li:hover:before {
+}
+.header .mega-menu .links li a {
+  color: var(--main-color);
+  padding: 15px;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+}
+.header .mega-menu .links li a i {
+  margin-right: 10px;
+}
+
 /* End Header */
 /* Start Landing */
 .landing {
@@ -220,7 +259,8 @@ a {
 /* End Landing */
 /* Start Animation */
 @keyframes up-and-down {
-  0%, 100% {
+  0%,
+  100% {
     top: 0;
   }
   50% {
@@ -228,10 +268,16 @@ a {
   }
 }
 @keyframes bouncing {
-  0%, 10%, 20%, 50%, 80%, 100% {
+  0%,
+  10%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
-  40%, 60% {
+  40%,
+  60% {
     transform: translateY(-15px);
   }
 }
