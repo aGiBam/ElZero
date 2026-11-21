@@ -622,8 +622,38 @@ a {
   margin-top: 10px;
   margin-bottom: 0;
 }
-
 /* End Testimonails */
+/* Start teamMembers */
+.teamMembers {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+}
+.teamMembers .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+.teamMembers .box {
+  position: relative;
+}
+.teamMembers .box::before {
+  content: '';
+  background-color: #f3f3f3;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: calc(100% - 60px);
+  border-radius: 10px;
+  z-index: -2;
+}
+.teamMembers .box .data img {
+  width: 100%;
+}
+.teamMembers .box {
+}
+/* End teamMembers */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
