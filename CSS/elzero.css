@@ -63,6 +63,7 @@ a {
   padding: 10px 20px;
   font-size: 30px;
   width: fit-content;
+  text-transform: uppercase ;
   position: relative;
   z-index: 1;
   transition: var(--main-transition-duration);
