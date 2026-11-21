@@ -415,7 +415,7 @@ a {
 /* End Articles */
 /* Start Gallery */
 .gallery {
-  background-color: #ececec;
+  background-color: var(--);
   padding-top: var(--main-padding-top);
   padding-bottom: var(--main-padding-bottom);
 }
@@ -461,11 +461,11 @@ a {
 /* End Gallery */
 /* Start Features */
 .features .container {
-      display: flex;
-    gap: 40px;
-    justify-content: space-around;
-    padding-top: var(--main-padding-top);
-    padding-bottom: var(--main-padding-bottom);
+  display: flex;
+  gap: 40px;
+  justify-content: space-around;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
 }
 .features .card {
   display: flex;
@@ -486,7 +486,7 @@ a {
   z-index: 0;
 }
 .features .card .image::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   background-color: #f44036;
@@ -496,7 +496,7 @@ a {
   opacity: 0.6;
 }
 .features .card .image::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   transform: skew(18deg);
@@ -508,17 +508,17 @@ a {
 }
 
 .features .card .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
 }
 .features .card .text h3 {
   font-size: 35px;
   position: relative;
 }
 .features .card .text h3::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 8px;
   bottom: 0;
@@ -527,10 +527,35 @@ a {
   background-color: #f44036;
 }
 
-
-.features .card .text p {}
+/* .features .card .text p {
+} */
 
 /* End Features */
+/* Start Testimonials */
+.testimonials {
+  background-color: #ececec;
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.testimonials .card {
+  padding: 15px;
+  position: relative;
+  background-color: white;
+}
+.testimonials .card img {
+  border-radius: 50%;
+  position: absolute;
+  width: 75px;
+  background-position: top right;
+  height: 75px;
+  top: 0;
+}
+/* End Testimonials */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
