@@ -727,13 +727,15 @@ a {
 }
 .services .box {
   background-color: white;
-  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  box-shadow:
+    0 12px 20px 0 rgb(0 0 0 / 13%),
+    0 2px 4px 0 rgb(0 0 0 / 12%);
   counter-increment: services;
   transition: var(--main-transition-duration);
   position: relative;
 }
 .services .box::before {
-  content: '';
+  content: "";
   left: 50%;
   transform: translateX(-50%);
   height: 3px;
@@ -750,10 +752,10 @@ a {
   width: 100%;
 }
 .services .box > i {
- margin: 40px auto 20px;
- display: block;
- text-align: center;
- color: #D5D5D5; 
+  margin: 40px auto 20px;
+  display: block;
+  text-align: center;
+  color: #d5d5d5;
 }
 .services .box > h3 {
   text-align: center;
@@ -764,7 +766,7 @@ a {
 .services .box .info {
   padding: 15px;
   position: relative;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   text-align: right;
 }
 .services .box .info a {
@@ -787,9 +789,9 @@ a {
   padding-right: 15px;
 }
 .services .box .info::after {
-  content: '';
+  content: "";
   position: absolute;
-  background-color: #D5D5D5;
+  background-color: #d5d5d5;
   top: 0;
   left: 80px;
   width: 50px;
@@ -797,6 +799,49 @@ a {
   transform: skewX(-30deg);
 }
 /* End Services */
+/* Start Our Skills */
+.ourSkills {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+}
+.ourSkills .container {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .ourSkills img {
+    display: none;
+  }
+}
+.ourSkills .skills {
+  flex: 1;
+}
+.ourSkills .skill h3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ourSkills .skill h3 span{
+  font-size: 12px;
+  border: 1px solid #CCC;
+  padding: 3px 5px;
+  border-radius: 4px;
+  color: var(--main-color);
+}
+.ourSkills .skill .the-progress{
+  height: 30px;
+  background-color: #eee;
+  position: relative;
+}
+.ourSkills .skill .the-progress span{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: var(--main-color);
+}
+/* End Our Skills */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
