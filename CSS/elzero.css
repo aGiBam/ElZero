@@ -637,22 +637,82 @@ a {
 .teamMembers .box {
   position: relative;
 }
-.teamMembers .box::before {
-  content: '';
+.teamMembers .box::before,
+.teamMembers .box::after {
+  content: "";
   background-color: #f3f3f3;
   position: absolute;
   right: 0;
   top: 0;
   height: 100%;
-  width: calc(100% - 60px);
   border-radius: 10px;
+}
+.teamMembers .box::before {
+  width: calc(100% - 60px);
   z-index: -2;
 }
+.teamMembers .box::after {
+  z-index: -1;
+  background-color: #e4e4e4;
+  width: 0;
+  transition: var(--main-transition-duration);
+}
+.teamMembers .box:hover::after {
+  width: calc(100% - 60px);
+}
+.teamMembers .box .data {
+  display: flex;
+  align-items: center;
+  padding-top: 60px;
+}
 .teamMembers .box .data img {
-  width: 100%;
+  width: calc(100% - 60px);
+  transition: var(--main-transition-duration);
+  border-radius: 10px;
 }
-.teamMembers .box {
+.teamMembers .box:hover img {
+  filter: grayscale(100%);
 }
+.teamMembers .box .data .social {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+} 
+.teamMembers .box .data .social a {
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+.teamMembers .box .data .social a:hover i{
+  color: var(--main-color);
+}
+
+.teamMembers .box .data .social i {
+  transition: var(--main-transition-duration);
+  color: #777;
+} 
+
+.teamMembers .box .info {
+  padding-left: 80px;
+}
+.teamMembers .box .info h3 {
+  margin-bottom: 0;
+  color: var(--main-color);
+  font-size: 22px;
+  transition: var(--main-transition-duration);
+}
+.teamMembers .box:hover .info h3 {
+  color: #555;
+}
+.teamMembers .box .info p {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
 /* End teamMembers */
 /* Start Animation */
 @keyframes up-and-down {
