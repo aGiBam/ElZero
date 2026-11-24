@@ -1065,8 +1065,52 @@ a {
     border-radius: 0;
   }
 }
-
 /* End Latest Events */
+/* Start Pricing Plans */
+.pricingPlans {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: var(--section-background);
+}
+.pricingPlans .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+.pricingPlans .box {
+  position: relative;
+  box-shadow:
+    0px 12px 20px 0px rgb(0 0 0 / 13%),
+    0px 2px 4px 0px rgb(0 0 0 / 12%);
+  transition: var(--main-transition-duration);
+  background-color: white;
+  text-align: center;
+  z-index: 1;
+}
+.pricingPlans .box::before,
+.pricingPlans .box::after {
+  content: "";
+  width: 0;
+  height: 50%;
+  background-color: #f6f6f6;
+  position: absolute;
+  z-index: -1;
+  transition: var(--main-transition-duration);
+}
+.pricingPlans .box::before {
+  left: 0;
+  top: 0;
+}
+.pricingPlans .box::after {
+  right: 0;
+  bottom: 0;
+}
+.pricingPlans .box:hover::before,
+.pricingPlans .box:hover::after {
+  width: 100%;
+}
+/* End Pricing Plans */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
