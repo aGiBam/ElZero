@@ -1125,90 +1125,146 @@ a {
 .pricingPlans .box:hover::after {
   width: 100%;
 }
-  .pricingPlans .box.popular .label {
-    position: absolute;
-    writing-mode: vertical-rl;
-    background-color: var(--main-color);
-    color: white;
-    font-weight: bold;
-    padding: 10px 10px 35px 10px;
-    font-size: 18px;
-    right: 20px;
-    width: 40px;
-  }
-  .pricingPlans .box.popular .label::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    border-style: solid;
-    border-color: transparent transparent white transparent;
-    border-width: 20px;
-  }
-@media (min-width: 1200px){
+.pricingPlans .box.popular .label {
+  position: absolute;
+  writing-mode: vertical-rl;
+  background-color: var(--main-color);
+  color: white;
+  font-weight: bold;
+  padding: 10px 10px 35px 10px;
+  font-size: 18px;
+  right: 20px;
+  width: 40px;
+}
+.pricingPlans .box.popular .label::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  border-width: 20px;
+}
+@media (min-width: 1200px) {
   .pricingPlans .box.popular {
-    top: -20px ;
+    top: -20px;
   }
 }
-  .pricingPlans .box .title {
-    font-weight: bold;
-    margin: 30px 0;
-    font-size: 25px;
-    letter-spacing: -1;
-  }
-  .pricingPlans .box img {
-    width: 80px;
-    margin-bottom: 30px;
-  }
-  .pricingPlans .box .price {
-    margin-bottom: 20px;
-  }
-  .pricingPlans .box .amount {
-    display: block;
-    font-size: 60px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: var(--main-color);
-    
-  }
-  .pricingPlans .box .time {
-    color: #777;
-  }
-  .pricingPlans .box ul {
-    text-align: left;
-  
-  }
-  .pricingPlans .box li{
-    padding: 20px;
-    border-top: 1px solid #eee;
-  }
-  .pricingPlans .box li::before{
-    content: '\f00c';
-    font-family: "Font Awesome 5 Free";
-    margin-right: 10px;
-    font-weight: 900;
-    color: var(--main-color);
-  }
-  .pricingPlans .box a{
-    display: block;
-    width: fit-content;
-    border: 2px solid var(--main-color);
-    color: var(--main-color);
-    margin: 30px auto 40px;
-    padding: 15px 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: var(--main-transition-duration);
-  }
-  .pricingPlans .box a:hover{
-    background-color: var(--main-color-alt);
-    border-color: var(--main-color-alt);
-    color: white;
-  }
+.pricingPlans .box .title {
+  font-weight: bold;
+  margin: 30px 0;
+  font-size: 25px;
+  letter-spacing: -1;
+}
+.pricingPlans .box img {
+  width: 80px;
+  margin-bottom: 30px;
+}
+.pricingPlans .box .price {
+  margin-bottom: 20px;
+}
+.pricingPlans .box .amount {
+  display: block;
+  font-size: 60px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--main-color);
+}
+.pricingPlans .box .time {
+  color: #777;
+}
+.pricingPlans .box ul {
+  text-align: left;
+}
+.pricingPlans .box li {
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+.pricingPlans .box li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  margin-right: 10px;
+  font-weight: 900;
+  color: var(--main-color);
+}
+.pricingPlans .box a {
+  display: block;
+  width: fit-content;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+  margin: 30px auto 40px;
+  padding: 15px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: var(--main-transition-duration);
+}
+.pricingPlans .box a:hover {
+  background-color: var(--main-color-alt);
+  border-color: var(--main-color-alt);
+  color: white;
+}
 
 /* End Pricing Plans */
-.topVideos {}
-.topVideos .holder{}
+.topVideos {
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+}
+.topVideos .holder {
+  display: flex;
+  justify-content: center;
+  background-color: var(--section-background);
+  border: 1px solid #ddd;
+}
+@media (max-width: 991px) {
+.topVideos .holder {
+  flex-direction: column;
+}
+}
+.topVideos .holder .list {
+  min-width: 300px;
+  background-color: white;
+}
+.topVideos .holder .list .name {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.topVideos .holder .list ul li {
+  padding: 20px;
+  border-top: 1px solid var(--main-color);
+  cursor: pointer;
+  transition: var(--main-transition-duration);
+}
+.topVideos .holder .list ul li:hover {
+  background-color: #FaFaFa;
+  color: var(--main-color);
+}
+
+.topVideos .holder .list ul li span {
+  display: block;
+  margin-top: 10px;
+  color: #777;
+}
+
+.topVideos .holder .preview {
+  background-color: #e2e2e2;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.topVideos .holder .preview img {
+  max-width: 100%;
+}
+.topVideos .holder .preview .info {
+  padding: 20px;
+  background-color: white;
+  margin-top: 10px;
+}
+
 /* Start Top Videos */
 
 /* End Top Videos */
