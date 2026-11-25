@@ -1207,6 +1207,11 @@ a {
   }
 
 /* End Pricing Plans */
+.topVideos {}
+.topVideos .holder{}
+/* Start Top Videos */
+
+/* End Top Videos */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
